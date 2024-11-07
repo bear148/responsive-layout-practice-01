@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800');
+
+:root {
+    --nav-bar-bg: rgb(56, 62, 76);
+    --nav-bar-a-brdr: rgb(100, 109, 124);
+    --nav-bar-a-hover: rgb(73, 80, 95);
+}
+
+* {
+    font-family: "Open Sans";
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+nav.flex {
+    background-color: var(--nav-bar-bg);
+}
+
+nav.flex a {
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid var(--nav-bar-a-brdr);
+}
+
+nav.flex a:hover {
+    background-color: var(--nav-bar-a-hover);
+}
+
+nav.flex a.active {
+    background-color: var(--nav-bar-a-hover);
+}
+
+.hero {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-image: url(/img/img11.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 55vh;
+}
+
+.hero * {
+    font-weight: normal;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px black;
+}
+
+.hero h3 {
+    font-size: 1.5rem;
+}
+
+.thirds.card {
+    background-color: gray;
+}
