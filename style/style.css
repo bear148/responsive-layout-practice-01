@@ -4,11 +4,18 @@
     --nav-bar-bg: rgb(56, 62, 76);
     --nav-bar-a-brdr: rgb(100, 109, 124);
     --nav-bar-a-hover: rgb(73, 80, 95);
+    --card-bg: rgb(242, 242, 242);
+    --green: rgb(23, 138, 39);
+    --blue: rgb(22, 134, 193);
+    --red: rgb(133, 36, 6);
+    --text: rgb(74, 74, 74);
+    --header: rgb(102, 102, 102);
 }
 
 * {
     font-family: "Open Sans";
     margin: 0;
+    box-sizing: content-box;
 }
 
 .flex {
@@ -68,6 +75,108 @@ nav.flex a.active {
     font-size: 1.5rem;
 }
 
-.thirds.card {
-    background-color: gray;
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.layout {
+    display: flex;
+    max-width: 1280px;
+    justify-content: space-around;
+    padding-top: 4rem;
+}
+
+.layout.half .card h2 {
+    align-self: center;
+    color: var(--header);
+}
+
+.card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+}
+
+.layout .card {
+    background-color: var(--card-bg);
+}
+
+.layout .card p {
+    color: var(--text);
+}
+
+.layout.thirds .card {
+    width: 30%;
+}
+
+.layout.half .card {
+    width: 48%;
+}
+
+.layout.half .card p {
+    padding-top: 20px;
+}
+
+
+.layout .card p, .layout .card h2 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.layout .card h2 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.layout .card img {
+    width: 100%;
+}
+
+.b {
+    color: white;
+    text-decoration: none;
+    font-size: 24.4px;
+    align-self: center;
+    border-radius: 5px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin: 25px;
+}
+
+.red {
+    background-color: var(--red);
+}
+
+.blue {
+    background-color: var(--blue);
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.rh {
+    color: darkgray;
+}
+
+.bh {
+    color: var(--blue)
+}
+
+.gh {
+    color: var(--green)
+}
+
+.b.readm {
+    align-self: flex-end;
+    background-color: white;
+    border: 1px solid var(--header);
+    color: var(--header);
+    margin-right: 5rem;
 }
