@@ -59,6 +59,7 @@ nav.flex a.active {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     height: 55vh;
 }
 
@@ -85,11 +86,11 @@ nav.flex a.active {
 .layout {
     display: flex;
     max-width: 1280px;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-top: 4rem;
 }
 
-.layout.half .card h2 {
+.layout.half .card h2, .layout.quart .card h2 {
     align-self: center;
     color: var(--header);
 }
@@ -110,11 +111,19 @@ nav.flex a.active {
 }
 
 .layout.thirds .card {
-    width: 30%;
+    width: 31%;
 }
 
 .layout.half .card {
     width: 48%;
+}
+
+.layout.quart .card {
+    width: 22%;
+}
+
+.layout.big .card {
+    width: 100%;
 }
 
 .layout.half .card p {
@@ -147,7 +156,70 @@ nav.flex a.active {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     margin: 25px;
+    min-width: 78px;
 }
+
+.banner {
+    display: flex;
+    flex-flow: column nowrap;
+    background-image: url(/img/img13.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 25vh;
+    color: white;
+    margin-top: 64px;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner * {
+    font-weight: normal;
+}
+
+.banner h2 {
+    font-size: 2rem;
+    text-shadow: 1px 1px var(--header);
+}
+
+.banner p {
+    width: 44%;
+    font-size: 1.2rem;
+}
+
+.layout.big .card h2 {
+    margin-top: 1.5rem;
+    color: var(--header);
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 100vw;
+    background-image: url(/img/img14.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+    color: white;
+    padding-top: 25px;
+    margin-top: 64px;
+}
+
+.contact section h2 {
+    font-size: 2rem;
+    text-shadow: 1px 1px var(--header);
+}
+
+.contact section * {
+    font-weight: normal;
+}
+
+/**/
 
 .red {
     background-color: var(--red);
@@ -179,4 +251,24 @@ nav.flex a.active {
     border: 1px solid var(--header);
     color: var(--header);
     margin-right: 5rem;
+}
+
+.mr {
+    margin-right: 15px;
+}
+
+.ml {
+    margin-left: 15px;
+}
+
+.b.readm.end {
+    margin: 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    align-self: center;
+}
+
+.b.readm.bbig {
+    margin-right: 0;
+    align-self: flex-start;
 }
