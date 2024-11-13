@@ -227,7 +227,7 @@ nav.flex a.active {
     align-self: center;
 }
 
-.contact section *:not(h2) {
+.contact-container div *:not(div) {
     color: black;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
