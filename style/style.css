@@ -182,7 +182,7 @@ nav.flex a.active {
 }
 
 .banner h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-shadow: 1px 1px var(--header);
 }
 
@@ -219,6 +219,8 @@ nav.flex a.active {
     font-weight: normal;
     align-self: center;
     padding: 2rem;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px black;
 }
 
 .contact:first-child {
@@ -249,6 +251,7 @@ nav.flex a.active {
 
 .contact-container {
     max-width: 720px;
+    margin-top: 2rem;
 }
 
 .contact-container p {
@@ -272,8 +275,11 @@ nav.flex a.active {
     padding: 0.5rem;
 }
 
-.contact-message input {
-    height: 119px;
+.contact-message textarea {
+    margin-top: 1rem;
+    width: 100%;
+    min-height: 134px;
+    padding: 0.5rem;
 }
 
 .inputs * {
@@ -283,13 +289,13 @@ nav.flex a.active {
 
 .inputs * input {
     width: 100%;
-    margin-top: 0.5rem;
-    max-width: 360px;
+    margin-top: 1rem;
 }
 
-input::placeholder {
+input::placeholder, textarea::placeholder {
     color: black;
     text-align: start;
+    font-size: 1rem;
 }
 
 .submit {
@@ -316,14 +322,150 @@ footer *:not(hr) {
 
 footer hr {
     width: 100%;
+    border: none;
+    background-color: var(--card-bg);
+    height: 1px;
 }
 
 footer h2 {
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 36px;
+    font-style: italic;
+}
+
+footer p {
+    color: var(--header);
+}
+
+footer p:last-child {
+    font-style: normal;
+    font-weight: 300;
 }
 
 footer:first-of-type(p) {
     padding-top: 0;
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (max-width: 1024px) {
+    .layout.quart {
+        flex-wrap: wrap;
+    }
+    .layout.quart .card {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    #content {
+        height: fit-content;
+    }
+
+    .flex {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav.flex a {
+        color: white;
+        font-size: 13px;
+        text-decoration: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border: 1px solid var(--nav-bar-a-brdr);
+        margin: 2px;
+    }
+
+    .hero {
+        height: 35vh;
+    }
+
+    .banner h2 {
+        font-size: 1.75rem;
+        text-shadow: 1px 1px var(--header);
+    }
+    
+    .banner p {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    .contact-container {
+        max-width: 100%;
+    }
+
+    .contact {
+        height: fit-content;
+    }
+
+    .inputs {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 1rem;
+        height: fit-content;
+    }   
+    
+    .inputs * {
+        width: 100%;
+    }
+    
+    .contact-info {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .layout {
+        flex-flow: column;
+        display: flex;
+    }
+
+    .layout.half section:nth-child(2) {
+        margin-top: 2rem;
+    }
+
+    .layout.quart section:not(:first-child) {
+        margin-top: 2rem;
+    }
+
+    .card {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-flow: column nowrap;
+    }
+
+    .card p {
+        padding-bottom: 1rem;
+    }
+
+    .layout:nth-child(2n) {
+        margin-top: 2rem;
+    }
+    .b {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        align-self: center;
+        border-radius: 5px;
+        text-align: center;
+        margin: 25px;
+        min-width: 78px;
+    }
+    
+    .layout.thirds .card, .layout.half .card, .layout.quart .card {
+        width: 100%;
+    }
+
+    .contact-container .inputs * {
+        overflow-y: hidden;
+    }
 }
 
 /**/
