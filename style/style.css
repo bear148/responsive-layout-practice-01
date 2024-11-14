@@ -306,18 +306,22 @@ input::placeholder, textarea::placeholder {
     margin-right: -134px;
 }
 
-footer {
+#footer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     font-style: italic;
     flex-flow: column;
     font-weight: 100;
 }
 
-footer *:not(hr) {
+footer *:not(hr, a, img, div) {
     padding: 2rem;
     color: var(--header)
+}
+
+footer *:not(img, a) {
+    align-self: center;
 }
 
 footer hr {
@@ -347,7 +351,7 @@ footer:first-of-type(p) {
 }
 
 footer a {
-    float: right;
+    margin: 2rem;
 }
 
 /* RESPONSIVENESS */
